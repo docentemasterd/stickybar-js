@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>StickyBar</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!--<link rel="stylesheet" href="estilos.css">-->
+	<style type="text/css">
+	*{font-family: Arial;}
+		.nav{
+			color: #5b5b5b;
+			font-size: 40px;
+		}
+		.sticky {
+			position: fixed;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			border-top: 0;
+			background-color: #000;
+			color: #fff;
+			font-size: 30px;
+			-webkit-box-shadow: 0px 6px 16px 3px rgba(46,45,46,0.70);
+			-moz-box-shadow: 0px 6px 16px 3px rgba(46,45,46,0.70);
+			box-shadow: 0px 6px 16px 3px rgba(46,45,46,0.70);
+		}
+		.content{
+			width: 500px;
+			height: auto;
+			margin: 0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var stickyNavTop = $('.nav').offset().top;
+			//alert(stickyNavTop);
+			 
+			var stickyNav = function(){
+				var scrollTop = $(window).scrollTop();
+				      
+				if (scrollTop > stickyNavTop) { 
+				    $('.nav').addClass('sticky');
+				//		$('.nav').animate({height: "+=20px"}, "slow");
+				} else {
+				    $('.nav').removeClass('sticky');
+					//		$('.nav').animate({height: "-=20px"}, "slow"); 
+				}
+			};
+			 
+			stickyNav();
+			 
+			$(window).scroll(function() {
+			  stickyNav();
+			});
+		});
+	</script>
+</head>
+<body>
+	
+	<div class="wrapper">
+  <div class="header">
+    Cabecera de la página
+  </div>
+  <br/>
+  <div class="nav">
+    Menú de Navegación > Inicio.
+  </div>
+  <div class="content">
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non labore autem repellat ipsum amet necessitatibus vero culpa, est esse, quas atque, enim quo dolores iure ea perspiciatis at nisi deserunt.</span>
+    <span>Fugit repellendus dolor, veniam earum corrupti neque, quo amet aliquid voluptas! Harum incidunt in architecto esse numquam cumque, assumenda ratione deserunt, expedita, aliquam blanditiis explicabo minima ullam laudantium eum. Ipsum!</span>
+    <span>Minima inventore est, beatae laboriosam fugiat aperiam voluptates architecto quisquam eos doloribus molestiae tempora excepturi nobis et a harum necessitatibus, ad. Iste nemo dolorem obcaecati soluta dolores ut, facere eum.</span>
+    <span>Ab eos, incidunt dolorem laboriosam, veritatis aperiam molestiae necessitatibus, nostrum totam voluptates natus. Voluptatum, quibusdam tempora. Ut ipsa ullam tempora, voluptatum adipisci praesentium deleniti. Consequuntur autem perferendis corporis dignissimos saepe!</span>
+    <span>Ad distinctio ullam officia veniam iste dicta fugit provident, sapiente modi! Aut molestias delectus inventore at. Dolore quam dignissimos quidem aperiam, vel, numquam. Nulla nam deleniti eos quibusdam cum reiciendis.</span>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non labore autem repellat ipsum amet necessitatibus vero culpa, est esse, quas atque, enim quo dolores iure ea perspiciatis at nisi deserunt.</span>
+    <span>Fugit repellendus dolor, veniam earum corrupti neque, quo amet aliquid voluptas! Harum incidunt in architecto esse numquam cumque, assumenda ratione deserunt, expedita, aliquam blanditiis explicabo minima ullam laudantium eum. Ipsum!</span>
+    <span>Minima inventore est, beatae laboriosam fugiat aperiam voluptates architecto quisquam eos doloribus molestiae tempora excepturi nobis et a harum necessitatibus, ad. Iste nemo dolorem obcaecati soluta dolores ut, facere eum.</span>
+    <span>Ab eos, incidunt dolorem laboriosam, veritatis aperiam molestiae necessitatibus, nostrum totam voluptates natus. Voluptatum, quibusdam tempora. Ut ipsa ullam tempora, voluptatum adipisci praesentium deleniti. Consequuntur autem perferendis corporis dignissimos saepe!</span>
+    <span>Ad distinctio ullam officia veniam iste dicta fugit provident, sapiente modi! Aut molestias delectus inventore at. Dolore quam dignissimos quidem aperiam, vel, numquam. Nulla nam deleniti eos quibusdam cum reiciendis.</span>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non labore autem repellat ipsum amet necessitatibus vero culpa, est esse, quas atque, enim quo dolores iure ea perspiciatis at nisi deserunt.</span>
+    <span>Fugit repellendus dolor, veniam earum corrupti neque, quo amet aliquid voluptas! Harum incidunt in architecto esse numquam cumque, assumenda ratione deserunt, expedita, aliquam blanditiis explicabo minima ullam laudantium eum. Ipsum!</span>
+    <span>Minima inventore est, beatae laboriosam fugiat aperiam voluptates architecto quisquam eos doloribus molestiae tempora excepturi nobis et a harum necessitatibus, ad. Iste nemo dolorem obcaecati soluta dolores ut, facere eum.</span>
+    <span>Ab eos, incidunt dolorem laboriosam, veritatis aperiam molestiae necessitatibus, nostrum totam voluptates natus. Voluptatum, quibusdam tempora. Ut ipsa ullam tempora, voluptatum adipisci praesentium deleniti. Consequuntur autem perferendis corporis dignissimos saepe!</span>
+    <span>Ad distinctio ullam officia veniam iste dicta fugit provident, sapiente modi! Aut molestias delectus inventore at. Dolore quam dignissimos quidem aperiam, vel, numquam. Nulla nam deleniti eos quibusdam cum reiciendis.</span>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non labore autem repellat ipsum amet necessitatibus vero culpa, est esse, quas atque, enim quo dolores iure ea perspiciatis at nisi deserunt.</span>
+    <span>Fugit repellendus dolor, veniam earum corrupti neque, quo amet aliquid voluptas! Harum incidunt in architecto esse numquam cumque, assumenda ratione deserunt, expedita, aliquam blanditiis explicabo minima ullam laudantium eum. Ipsum!</span>
+    <span>Minima inventore est, beatae laboriosam fugiat aperiam voluptates architecto quisquam eos doloribus molestiae tempora excepturi nobis et a harum necessitatibus, ad. Iste nemo dolorem obcaecati soluta dolores ut, facere eum.</span>
+    <span>Ab eos, incidunt dolorem laboriosam, veritatis aperiam molestiae necessitatibus, nostrum totam voluptates natus. Voluptatum, quibusdam tempora. Ut ipsa ullam tempora, voluptatum adipisci praesentium deleniti. Consequuntur autem perferendis corporis dignissimos saepe!</span>
+    <span>Ad distinctio ullam officia veniam iste dicta fugit provident, sapiente modi! Aut molestias delectus inventore at. Dolore quam dignissimos quidem aperiam, vel, numquam. Nulla nam deleniti eos quibusdam cum reiciendis.</span>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

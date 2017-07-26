@@ -1,0 +1,16 @@
+/*  Sticky bar con CSS - Activar el webkit experimental */
+
+.nav {
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 1;
+	height: 50px;
+	background-color: #000;
+	color: #fff;
+}
+
+.content{
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
